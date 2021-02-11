@@ -1,1 +1,1 @@
-qedit: qedit.cc 
+qui: qui.cc 
