@@ -4,3 +4,6 @@ OUT = qui
 
 build: $(OBJS)
 	$(CXX) -o $(OUT)
+
+clean:
+	rm -rf $(OUT) $(OBJS) *~
