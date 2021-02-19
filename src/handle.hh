@@ -6,9 +6,11 @@
 class Handle
 {
 public:
-  Handle (std::ofstream __FILE__OPEN__);
+  Handle (char* argv[]); // ctor
+  ~Handle(); // dtor
   
   std::string input;
+  char* __m_File__;
   static std::stringstream __cmd__;
 
   void file(char*);

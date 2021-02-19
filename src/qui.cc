@@ -11,11 +11,8 @@ int main(int argc, char* argv[])
    std::cout << "Opening: " << argv[1] << std::endl;
    std::vector <std::string> x;
    std::string input { };
-   std::ofstream __FILE__OPEN__;
-   
-   __FILE__OPEN__.open(argv[1]);
 
-   Handle event(&__FILE__OPEN__);
+   Handle event(&argv);
    
    while (true)
    {

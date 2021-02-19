@@ -1,6 +1,12 @@
 #include "handle.hh"
 
-Handle::Handle()
+Handle::Handle(char* argv[])
+{
+  std::ifstream __FILE__OPEN__;
+  __FILE__OPEN__.open(argv[1]);
+}
+
+Handle::~Handle()
 {
 }
 
