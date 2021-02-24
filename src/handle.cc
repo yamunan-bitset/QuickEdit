@@ -1,36 +1,33 @@
 #include "handle.hh"
 
-Handle::Handle(char* argv[])
+Handle::Handle(char* argv)
 {
-  std::ifstream __FILE__OPEN__;
-  __FILE__OPEN__.open(argv[1]);
+  __FILE__OPEN__ = fopen(argv, "w+");
 }
 
 Handle::~Handle()
 {
 }
 
-void Handle::file(char argv[])
+void Handle::file(std::string argv)
 {
-  __FILE__OPEN__ << std::endl;
-  __cmd__ << "file " << argv[1];
+  __cmd__ << "file " << argv;
   std::system(__cmd__.str().c_str());
   return;
 }
 
-void Handle::less(char argv[])
+void Handle::less(std::string argv)
 {
-  __FILE__OPEN__ << std::endl;
   std::stringstream __cmd__;
-  __cmd__ << "less " << argv[1];
+  __cmd__ << "less " << argv;
   std::system(__cmd__.str().c_str());
   return;
 }
 
-void Handle::size(char argv[])
+void Handle::size(std::string argv)
 {
   std::stringstream __cmd__;
-  __cmd__ << "du -sh " << argv[1];
+  __cmd__ << "du -sh " << argv;
   std::system(__cmd__.str().c_str());
   return;	
 }
