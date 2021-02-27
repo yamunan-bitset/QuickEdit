@@ -1,8 +1,9 @@
-FILES = src/less.cc src/handle.cc src/qui.cc
-CXX   = g++
-OUT   = qui
+OBJS     = src/qui.o
+CXXFLAGS = -std=c++17
+CXX      = g++
+OUT      = qui
 
-build:
-	$(CXX) -o $(OUT) $(FILES)
+build: $(OBJS)
+	$(CXX) -o $(OUT) $(OBJS) $(CXXFLAGS)
 clean:
-	rm -rf $(OUT) $(OBJS)
+	rm -rf $(OUT)
