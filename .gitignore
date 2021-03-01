@@ -2,3 +2,4 @@
 qui
 src/*~
 src/*.o
+src/*.gch

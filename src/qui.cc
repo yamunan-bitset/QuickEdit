@@ -3,8 +3,9 @@
 #include <stdio.h>
 
 #include "handle.hh"
+#include "colours.hh"
 
-#define USAGE "\033[31mUsage: filename" // red
+#define USAGE std::cout << colours << red << "mUsage: filename" << std::endl;
 static bool done = false;
 
 int main(int argc, char* argv[])
@@ -15,32 +16,34 @@ int main(int argc, char* argv[])
   
   if (argc != 2)
     {
-      std::cerr << USAGE << std::endl;
+      USAGE;
       exit(0);
     }
   else if (argv[1] == "-h" || argv[1] == "--help")
-    std::cout << "\033[95mqui <FILE>" << std::endl; // light purple
+    std::cout << colours << purple << "mqui <FILE>" << std::endl;
   else openfile = argv[1];
 
   FILE* OpenFile;
   OpenFile = fopen(openfile, "w+");
-
+  fputs("\n", OpenFile);
+  
   while (!done)
     {
       std::cin >> input;
       if (input == ":q!") done = true;
-      if (input == ":less!") Handle::less(OpenFile);
+      else if (input == ":less!") Handle::less(openfile);
+      else if (input == ":n!") fputs("\n", OpenFile);
+      else if (input == ":size!") Handle::size(OpenFile);
+      else if (input == ":cat!")  Handle::cat(openfile);
       else
 	{
 	  x.push_back(input);
 	  fputs(input.c_str(), OpenFile);
-	}
+	}   
     }
   
   fclose(OpenFile);
-
-
-  std::cout << "\033[32mWrote: "; // green
+  std::cout << colours << green << "mWrote: ";
   for (std::string u: x)
     std::cout << u;
   std::cout << " to file: " << openfile << std::endl;
