@@ -2,6 +2,10 @@
 
 A Quick Text Editor with input editing.
 
+# WARNING
+
+I am not responsible for any data lose.
+
 # Bindings
 | Keybinding | Action |
 | :--- | :--- |
