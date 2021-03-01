@@ -5,7 +5,7 @@
 #include "handle.hh"
 #include "colours.hh"
 
-#define USAGE std::cout << colours << red << "mUsage: filename" << std::endl;
+#define USAGE std::cout << colours << red << colour << "Usage: filename" << std::endl;
 static bool done = false;
 
 int main(int argc, char* argv[])
@@ -20,15 +20,17 @@ int main(int argc, char* argv[])
       exit(0);
     }
   else if (argv[1] == "-h" || argv[1] == "--help")
-    std::cout << colours << purple << "mqui <FILE>" << std::endl;
+    std::cout << colours << purple << colour << "qui <FILE>" << std::endl;
   else openfile = argv[1];
 
   FILE* OpenFile;
   OpenFile = fopen(openfile, "w+");
+  std::cout << colours << yellow << colour << "Opening file: " << openfile << std::endl;
   fputs("\n", OpenFile);
   
   while (!done)
     {
+      std::cout << colours << white << colour << "";
       std::cin >> input;
       if (input == ":q!") done = true;
       else if (input == ":less!") Handle::less(openfile);
@@ -43,7 +45,7 @@ int main(int argc, char* argv[])
     }
   
   fclose(OpenFile);
-  std::cout << colours << green << "mWrote: ";
+  std::cout << colours << green << colour << "Wrote: ";
   for (std::string u: x)
     std::cout << u;
   std::cout << " to file: " << openfile << std::endl;
