@@ -14,3 +14,4 @@ I am not responsible for any data lose.
 | `:cat!` | Runs a cat-like program on the current file |
 | `:n!` | Adds a new line |
 | `:size!` | Prints the size of the current file |
+| `:e!` | Opens a different file |
