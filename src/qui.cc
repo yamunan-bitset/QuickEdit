@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 #include <cassert>
-#include <stdio.h>
+#include <cstdio>
 
 #include "handle.hh"
 #include "colours.hh"
@@ -59,6 +59,7 @@ Write:
     {
       fputs(u.c_str(), OpenFile);
       std::cout << u;
+      x.clear();
     }
   std::cout << " to file: " << openfile << std::endl;
   goto Loop;

@@ -6,6 +6,10 @@ A Quick Text Editor with input editing.
 
 I am not responsible for any data lose.
 
+# Usage:
+
+``./qui <FILENAME>``
+
 # Bindings
 | Keybinding | Action |
 | :--- | :--- |

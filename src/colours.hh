@@ -12,4 +12,5 @@ enum Colors
     purple = 95,
     green = 32
   };
+
 #endif
