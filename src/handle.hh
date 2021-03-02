@@ -4,8 +4,7 @@
 #include <string>
 #include <sstream>
 #include <fstream>
-
-#include "less.hh" // TODO
+#include "colours.hh"
 
 namespace Handle
 {
@@ -18,9 +17,13 @@ namespace Handle
   }
   void cat(char* openfile)
   {
-    std::stringstream __cmd__;
-    __cmd__ << "cat " << openfile;
-    std::system(__cmd__.str().c_str());
+    FILE* f = fopen(openfile, "r");
+    char contents;
+    while ((contents = fgetc(f)) != EOF)
+      std::cout << colours << cyan << colour << contents;
+    
+    std::cout << std::endl;
+    fclose(f);
     return;
   }
   void size(FILE* OpenFile)

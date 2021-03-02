@@ -1,0 +1,53 @@
+
+*** These modified files were found in JOE when it aborted on Tue Mar  2 11:06:19 2021
+*** JOE was aborted because the terminal closed
+
+*** File 'less.cc'
+#include "less.hh"
+
+Less::Less ()
+{
+}
+
+Less::~Less()
+{
+}
+
+void init()
+{
+}
+
+void open(FILE* OpenFile)
+{
+    while (!= EOF)
+    return;
+}
+
+*** File '(Unnamed)'
+shell
+eshell
+shell
+
+*** File '(Unnamed)'
+d
+comment
+
+*** File '(Unnamed)'
+qui.cc
+qui.cc
+qui.cc
+qui.cc
+qui.cc
+qui.cc
+qui.cc
+qui.cc
+less.cc
+less.hh
+less.cc
+less.hh
+
+*** File '* Startup Log *'
+Processing '/etc/joe/jmacsrc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/jmacsrc
