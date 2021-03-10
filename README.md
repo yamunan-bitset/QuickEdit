@@ -20,3 +20,7 @@ I am not responsible for any data lose.
 | `:n!` | Adds a new line |
 | `:size!` | Prints the size of the current file |
 | `:e!` | Opens a different file |
+
+# Install
+
+To install simply type ``make clean build install``
