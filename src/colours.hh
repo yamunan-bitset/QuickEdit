@@ -1,16 +1,27 @@
-#ifndef __COLOURS__HH__QUI__SDDSFDF_DSFSSFSDF_S__DF__
-#define __COLOURS__HH__QUI__SDDSFDF_DSFSSFSDF_S__DF__
+#ifndef cyan
+#define cyan "\033[36m"
+#endif
 
-char* colours = "\033[";
-char* colour  = "m";
-enum Colors
-  {
-    cyan = 36,
-    white = 97,
-    yellow = 93,
-    red = 31,
-    purple = 95,
-    green = 32
-  };
+#ifndef white
+#define white "\033[97m"
+#endif
 
+#ifndef yellow
+#define yellow "\033[93m"
+#endif
+
+#ifndef red
+#define red "\033[31m"
+#endif
+
+#ifndef purple
+#define purple "\033[95m"
+#endif
+
+#ifndef green
+#define green "\033[32m"
+#endif
+
+#ifndef blue
+#define blue "\033[34m"
 #endif

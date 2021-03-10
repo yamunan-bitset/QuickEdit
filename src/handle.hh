@@ -21,7 +21,7 @@ namespace Handle
     FILE* f = fopen(openfile, "r");
     char contents;
     while ((contents = fgetc(f)) != EOF)
-      std::cout << colours << cyan << colour << contents;
+      std::cout << cyan << contents;
     
     std::cout << std::endl;
     fclose(f);
