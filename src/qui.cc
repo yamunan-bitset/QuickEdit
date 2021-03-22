@@ -21,7 +21,7 @@ int main(int argc, char* argv[])
   
   // Arguments
   if      (argc != 2) goto Use;
-  else if (argv[1] == "-h" || argv[1] == "--help") goto Help;
+  else if (std::string(argv[1]) == "-h" || std::string(argv[1]) == "--help") goto Help;
   else openfile = argv[1];
 
   // Opening file
