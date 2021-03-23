@@ -25,7 +25,7 @@ int main(int argc, char* argv[])
   else openfile = argv[1];
 
   // Opening file
-  FILE* OpenFile;
+  std::FILE* OpenFile;
   OpenFile = fopen(openfile, MODE);
   std::cout << yellow << "Opening file: " << openfile << std::endl;
   fputs("\n", OpenFile);
